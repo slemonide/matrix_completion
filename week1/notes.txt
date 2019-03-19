@@ -1,0 +1,24 @@
+1. Try to plot the search space on the singular values plot (first two singular values, for example) -- done
+  --> invistigate geometry further
+
+2. Try to do gradient descent with a pseudonorm -- done
+
+3. Plot the objective function on a plane of largest pca variation
+
+Fluid Mech:
+
+1. Try implementing a descent solver to find the optimal fit
+
+Matrix Completion, manifold dimension estimation:
+
+
+How do you compute tangent space on the manifold?
+Like I can compute the derivatives and I want to find the dimension of the manifold.
+Sat 3:14 PM
+The tangent space has the same dimension as the manifold
+If you can compute the derivatives and find basis vectors for the derivatives, then you will be able to express any element of the tangent space as linear combinations of those basis vectors
+If you can find a basis for the derivatives, you can count how many basis vectors there are and then that will be the dimension of the manifold
+For example, as you know, on R^n, the tangent space at any point has basis consisting of d/dx1, d/dx2, ..., d/dxn as a basis, evaluated at that point
+2:42 PM
+hm
+so I can make a matrix of gradients with each gradient evaluated for different direction in the space that defines a manifold into the ambient space that contains the manifold and then compute the rank of the resultant matrix to get dimension
